@@ -22,3 +22,13 @@ VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2020-07-14T03:00:00Z', TIMESTAMP WITH T
 
 INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id)
 VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2021-07-14T03:00:00Z', TIMESTAMP WITH TIME ZONE '2022-07-14T03:00:00Z', 1);
+
+
+INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) 
+VALUES ('Trilha HTML', 'Trilha principal do curso', 1, 'https://images.unsplash.com/photo-1489506020498-e6c1cc350f10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', 1, 1);
+
+INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) 
+VALUES ('Fórum', 'Tire suas dúvidas', 2, 'https://images.unsplash.com/photo-1489506020498-e6c1cc350f10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', 2,1);
+
+INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) 
+VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://images.unsplash.com/photo-1489506020498-e6c1cc350f10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', 0, 1);
