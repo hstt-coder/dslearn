@@ -32,3 +32,15 @@ VALUES ('Fórum', 'Tire suas dúvidas', 2, 'https://images.unsplash.com/photo-14
 
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) 
 VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://images.unsplash.com/photo-1489506020498-e6c1cc350f10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', 0, 1);
+
+
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id)
+VALUES ('Capítulo 1', 'Neste capítulo vamos começar', 1, 'https://images.unsplash.com/photo-1489506020498-e6c1cc350f10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', 1, null);
+
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id)
+VALUES ('Capítulo 2', 'Neste capítulo vamos continuar', 2, 'https://images.unsplash.com/photo-1489506020498-e6c1cc350f10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', 1, 1);
+
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id)
+VALUES ('Capítulo 3', 'Neste capítulo vamos finalizar', 3, 'https://images.unsplash.com/photo-1489506020498-e6c1cc350f10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', 1, 2);
+
+
