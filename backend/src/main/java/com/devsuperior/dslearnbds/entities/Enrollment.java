@@ -2,6 +2,7 @@ package com.devsuperior.dslearnbds.entities;
 
 import java.time.Instant;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -19,7 +20,7 @@ public class Enrollment {
 
 	@EmbeddedId
 	private EnrollmentPK id = new EnrollmentPK();
-	
+
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant enrollMoment;
 
@@ -30,11 +31,10 @@ public class Enrollment {
 
 	@ManyToMany(mappedBy = "enrollmentsDone")
 	private Set<Lesson> lessonsDone = new HashSet<>();
-	
-	
+
 	@OneToMany(mappedBy = "enrollment")
 	private Set<Deliver> deliveries = new HashSet<>();
-	
+
 	public Enrollment() {
 	}
 
@@ -52,7 +52,7 @@ public class Enrollment {
 	public User getStudent() {
 		return id.getUser();
 	}
-	
+
 	public void setStudent(User user) {
 		id.setUser(user);
 	}
@@ -60,11 +60,11 @@ public class Enrollment {
 	public Offer getOffer() {
 		return id.getOffer();
 	}
-	
+
 	public void setOffer(Offer offer) {
 		id.setOffer(offer);
 	}
-	
+
 	public Instant getEnrollMoment() {
 		return enrollMoment;
 	}
@@ -97,6 +97,33 @@ public class Enrollment {
 		this.onlyUpdate = onlyUpdate;
 	}
 
-	
-	
+	public EnrollmentPK getId() {
+		return id;
+	}
+
+	public Set<Lesson> getLessonsDone() {
+		return lessonsDone;
+	}
+
+	public Set<Deliver> getDeliveries() {
+		return deliveries;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Enrollment other = (Enrollment) obj;
+		return Objects.equals(id, other.id);
+	}
+
 }
