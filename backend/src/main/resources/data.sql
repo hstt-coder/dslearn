@@ -43,4 +43,10 @@ VALUES ('Capítulo 2', 'Neste capítulo vamos continuar', 2, 'https://images.uns
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id)
 VALUES ('Capítulo 3', 'Neste capítulo vamos finalizar', 3, 'https://images.unsplash.com/photo-1489506020498-e6c1cc350f10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', 1, 2);
 
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update)
+VALUES (1, 1, '2020-07-14T13:00:00Z', null, true, false);
+
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update)
+VALUES (2, 1, '2020-07-14T23:30:00Z', null, true, false);
+
 
